@@ -29,23 +29,35 @@ mean_timeseries(2, :)';
 
 % Pairwise Temp ISC
 pai_t_ISC = get_pairwise_isc(mean_timeseries);
+% Save to .mat file
+save('pairwise_ISC.mat', 'pai_t_ISC');
 
 % LOO ISC
-
 loo_temporal_ISC = get_loo_ISC(mean_timeseries);
+% Save to .mat file
+save('LOOV_Temporal_ISC.mat', 'loo_temporal_ISC');
 
 % LOO Dynamic ISC
-get_loo_dynamic_ISC(mean_timeseries, 10, 10);
+loo_dynamic_ISC = get_loo_dynamic_ISC(mean_timeseries, 10, 10);
+% Save to .mat file
+save('LOOV_Dynamic_ISC.mat', 'loo_dynamic_ISC');
 
 
 % LOO Spatial ISC
-get_loo_spatial_ISC(mean_timeseries);
+loo_spatial_ISC = get_loo_spatial_ISC(mean_timeseries);
+% Save to .mat file
+save('LOOV_Spatial_ISC.mat', 'loo_spatial_ISC');
 
 % intra subject ISC
-get_intra_subject_ISC(roi_data);
+intra_subj_ISC = get_intra_subject_ISC(roi_data);
+% Save to .mat file
+save('Intra_Subject_ISC.mat', 'intra_subj_ISC');
 
 %ISFC
-get_ISFC(mean_timeseries);
+ISFC = get_ISFC(mean_timeseries);
+% Save to .mat file
+save('ISFC.mat', 'ISFC');
+
 
 
 % behavior similarity

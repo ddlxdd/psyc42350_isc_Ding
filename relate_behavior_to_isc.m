@@ -1,0 +1,1 @@
+function [behavioral_similarity, isc_behavior_correlation] = relate_behavior_to_isc(pairwise_temporal_ISC, behavior_scores, roi)
